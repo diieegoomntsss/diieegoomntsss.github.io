@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS 2 · id + índice — Diego Montes</title>
+    <style>
+      /* TIPOGRAFÍA GLOBAL */
+      * {
+        font-family: Georgia, serif;
+      }
+
+      /* FONDO GENERAL */
+      body {
+        background-color: #f1faee;
+      }
+
+      /* REGLAS GENERALES (PRIMERA CRIATURA) */
+      h1 { color: #2d6a4f; }
+      p  { color: #1b263b; }
+      strong { color: #e76f51; }
+
+      /* REGLAS POR ID (SEGUNDA CRIATURA, colores tomados de la nueva imagen) */
+      #titulo-animal2 { color: #5d3a00; }       /* marrón oscuro */
+      #desc-animal2 { color: #7f5f3b; }        /* marrón medio */
+      #desc-animal2 strong { color: #f4d35e; } /* amarillo dorado para énfasis */
+
+      /* VISUALIZACIÓN MEJORADA DEL ÍNDICE */
+      #indice {
+        padding-top: 40px;
+        margin-top: -40px;
+        background-color: #e9f5f0; /* resalta al saltar */
+      }
+
+      /* Separadores para ver los saltos */
+      hr { margin: 30px 0; border: 1px solid #ccc; }
+    </style>
+  </head>
+  <body>
+
+    <!-- ÍNDICE -->
+    <h2 id="indice">Índice</h2>
+    <ul>
+      <li><a href="#titulo-animal1">Criatura colorida</a></li>
+      <li><a href="#titulo-animal2">Criatura colorida nocturna</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- PRIMERA CRIATURA -->
+    <h1 id="titulo-animal1">Criatura colorida</h1>
+    <p id="desc-animal1">
+      La <strong>criatura</strong> vive en zonas húmedas de montaña.
+      Su hábitat combina vegetación densa y agua fría.
+      Destaca por su patrón de color llamativo y su comportamiento tranquilo.
+    </p>
+    <img src="https://www.publicdomainpictures.net/pictures/550000/nahled/fantasie-drachen-mythologie-kreatur-1698000360yGU.jpg"
+         alt="Criatura colorida en su hábitat de montaña"
+         width="520">
+    <p><a href="#indice">Volver al índice</a></p>
+
+    <hr>
+
+    <!-- SEGUNDA CRIATURA -->
+    <h1 id="titulo-animal2">Criatura colorida nocturna</h1>
+    <p id="desc-animal2">
+      Esta <strong>criatura</strong> es la misma especie, pero adaptada a la noche.
+      Sus tonos marrón y dorado la ayudan a camuflarse y destacar los detalles de su pelaje.
+    </p>
+    <img src="https://tools.images.thestoryshack.com/large-sphinx-name-generator-magic-the-gathering.jpg"
+         alt="Criatura colorida nocturna en versión fantástica"
+         width="520">
+    <p><a href="#indice">Volver al índice</a></p>
+
+    <hr>
+
+  </body>
+</html>

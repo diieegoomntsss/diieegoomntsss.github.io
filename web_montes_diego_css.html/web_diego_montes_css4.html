@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS por capas · Modelo de caja y grupos</title>
+
+  <style>
+    /* =========================================================
+       CSS 4 · MODELO DE CAJA / ESTRUCTURA (NO COLORES DE TEXTO)
+       ========================================================= */
+
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(245, 247, 250);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 24px;
+    }
+
+    header, nav, section, footer {
+      background-color: rgb(255, 255, 255);
+      border: 2px solid rgb(210, 220, 230);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    header h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      padding-left: 20px;
+    }
+
+    section {
+      background-color: rgb(250, 251, 252);
+      border-style: dashed;
+    }
+
+    article {
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(225, 230, 235);
+      border-radius: 12px;
+      padding: 14px;
+      margin: 12px 0;
+    }
+
+    img {
+      display: block;
+      margin: 12px auto;
+      border: 6px solid rgb(210, 220, 230);
+      border-radius: 10px;
+    }
+
+    footer p {
+      text-align: center;
+    }
+
+    /* =========================================================
+       CSS 3 · SEMÁNTICA VISUAL (COLORES POR CLASE Y CONTEXTO)
+       ========================================================= */
+
+    /* ----- Clases base ----- */
+    .titulo {
+      text-align: center;
+      color: rgb(27, 38, 59);
+    }
+
+    .texto {
+      color: rgb(45, 55, 72);
+    }
+
+    .texto strong {
+      color: rgb(231, 111, 81);
+    }
+
+    /* ----- Grupo A ----- */
+    .grupo-a .titulo {
+      color: rgb(45, 106, 79);
+    }
+
+    .grupo-a .texto {
+      color: rgb(27, 38, 59);
+    }
+
+    .grupo-a .texto strong {
+      color: rgb(10, 123, 131);
+    }
+
+    /* ----- Grupo B ----- */
+    .grupo-b .titulo {
+      color: rgb(138, 43, 226);
+    }
+
+    .grupo-b .texto {
+      color: rgb(38, 70, 83);
+    }
+
+    .grupo-b .texto strong {
+      color: rgb(244, 162, 97);
+    }
+  </style>
+</head>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Catálogo de criaturas · Modelo de caja y grupos</title>
+
+  <style>
+    /* =========================================================
+       CSS 4 · MODELO DE CAJA / ESTRUCTURA (NO COLORES DE TEXTO)
+       ========================================================= */
+
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(245, 247, 250);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 24px;
+    }
+
+    header, nav, section, footer {
+      background-color: rgb(255, 255, 255);
+      border: 2px solid rgb(210, 220, 230);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    header h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      padding-left: 20px;
+    }
+
+    section {
+      background-color: rgb(250, 251, 252);
+      border-style: dashed;
+    }
+
+    article {
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(225, 230, 235);
+      border-radius: 12px;
+      padding: 14px;
+      margin: 12px 0;
+    }
+
+    img {
+      display: block;
+      margin: 12px auto;
+      border: 6px solid rgb(210, 220, 230);
+      border-radius: 10px;
+    }
+
+    footer p {
+      text-align: center;
+    }
+
+    /* =========================================================
+       CSS 3 · SEMÁNTICA VISUAL (COLORES POR CLASE Y CONTEXTO)
+       ========================================================= */
+
+    /* ----- Clases base ----- */
+    .titulo {
+      text-align: center;
+      color: rgb(27, 38, 59);
+    }
+
+    .texto {
+      color: rgb(45, 55, 72);
+    }
+
+    .texto strong {
+      color: rgb(231, 111, 81);
+    }
+
+    /* ----- Grupo A ----- */
+    .grupo-a .titulo {
+      color: rgb(45, 106, 79);
+    }
+
+    .grupo-a .texto {
+      color: rgb(27, 38, 59);
+    }
+
+    .grupo-a .texto strong {
+      color: rgb(10, 123, 131);
+    }
+
+    /* ----- Grupo B ----- */
+    .grupo-b .titulo {
+      color: rgb(138, 43, 226);
+    }
+
+    .grupo-b .texto {
+      color: rgb(38, 70, 83);
+    }
+
+    .grupo-b .texto strong {
+      color: rgb(244, 162, 97);
+    }
+
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <header>
+      <h1 class="titulo">Catálogo de criaturas</h1>
+      <p class="texto">
+        Ejemplo de convivencia entre <strong>modelo de caja</strong> y
+        <strong>colores por grupo</strong>.
+      </p>
+    </header>
+
+    <nav>
+      <p class="texto"><strong>Índice:</strong></p>
+      <ul class="texto">
+        <li><a href="#grupo-a">Grupo A</a></li>
+        <li><a href="#grupo-b">Grupo B</a></li>
+      </ul>
+    </nav>
+
+    <!-- ================= TARJETA 1 · GRUPO A ================= -->
+    <section id="grupo-a" class="grupo-a">
+      <h2 class="titulo">Tarjeta 1 · Grupo A</h2>
+
+      <article>
+        <h3 class="titulo">Lince del valle</h3>
+        <p class="texto">
+          Animal solitario que vive en zonas montañosas y destaca por su
+          <strong>vista aguda</strong>.
+        </p>
+      </article>
+
+      <article>
+        <h3 class="titulo">Ciervo esmeralda</h3>
+        <p class="texto">
+          Habita bosques húmedos y se reconoce por sus
+          <strong>astas brillantes</strong>.
+        </p>
+      </article>
+
+      <article>
+        <h3 class="titulo">Serpiente del helecho</h3>
+        <p class="texto">
+          Reptil silencioso que se camufla entre plantas gracias a su
+          <strong>color verde intenso</strong>.
+        </p>
+      </article>
+
+    </section>
+
+    <p><a href="#indice">Volver al índice</a></p>
+
+    <!-- ================= TARJETA 2 · GRUPO B ================= -->
+    <section id="grupo-b" class="grupo-b">
+      <h2 class="titulo">Tarjeta 2 · Grupo B</h2>
+
+      <article>
+        <h3 class="titulo">Mantícora púrpura</h3>
+        <p class="texto">
+          Criatura legendaria de zonas desérticas con un
+          <strong>veneno poderoso</strong>.
+        </p>
+      </article>
+
+      <article>
+        <h3 class="titulo">Bruja del crepúsculo</h3>
+        <p class="texto">
+          Ser humanoide que aparece al atardecer y domina la
+          <strong>magia oscura</strong>.
+        </p>
+      </article>
+
+      <article>
+        <h3 class="titulo">Sombra errante</h3>
+        <p class="texto">
+          Entidad incorpórea que se desplaza de noche y emite un
+          <strong>resplandor tenue</strong>.
+        </p>
+      </article>
+
+    </section>
+
+    <p><a href="#indice">Volver al índice</a></p>
+
+    <footer>
+      <p class="texto">
+        <strong>Footer</strong> · Ejemplo de CSS por capas bien separado
+      </p>
+    </footer>
+
+  </main>
+</body>
+</html>
