@@ -1,0 +1,40 @@
+<html>
+<head>
+ <title>Suma y Promedio</title>
+ <style>
+   h1 {color:red}
+ </style>
+</head>
+
+<body>
+<script>
+// Defino variables
+let sumando_1;
+let sumando_2;
+let sumando_3;
+let suma;
+let promedio;
+
+// Pido valores al usuario
+sumando_1 = prompt("Dame un sumando cualquiera");
+sumando_2 = prompt("Dame otro sumando");
+sumando_3 = prompt("Dame uno más")
+
+// Convierto en Floats
+sumando_1 = parseFloat(sumando_1);
+sumando_2 = parseFloat(sumando_2);
+sumando_3 = parseFloat(sumando_3);
+
+// Hago las operaciones
+suma = sumando_1 + sumando_2 + sumando_3;
+promedio = suma / 3; // Calculo el promedio
+
+// Muestra el resultado de la suma y el promedio
+alert("El resultado de la suma es: " + suma);
+alert("El promedio de los tres números es: " + promedio);
+
+document.write("<h1> El promedio es: " + promedio + "</h1>");
+</script>
+
+</body>
+</html>

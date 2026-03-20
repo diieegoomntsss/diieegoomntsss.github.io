@@ -1,0 +1,33 @@
+<html>
+<head>
+ <title>Volumen Cilindro</title>
+ <style>
+   h1 {color:red}
+ </style>
+</head>
+
+<body>
+<script>
+// Defino variables
+let radio;
+let altura;
+let volumen;
+
+// Pido valores
+radio = prompt("Dame el radio");
+altura = prompt("Dame la altura");
+
+// Convierto
+radio = parseFloat(radio);
+altura = parseFloat(altura);
+
+// Operaciones
+volumen = Math.PI * radio * radio * altura;
+
+// Muestro resultado
+alert("El volumen es: " + volumen);
+document.write("<h1> El volumen es: " + volumen + "</h1>");
+</script>
+
+</body>
+</html>

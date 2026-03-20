@@ -1,0 +1,43 @@
+<html>
+<head>
+ <title>Promedio Final</title>
+ <style>
+   h1 {color:red}
+ </style>
+</head>
+
+<body>
+<script>
+
+// Defino variables
+let nota1;
+let nota2;
+let nota3;
+let promedio;
+
+// Pido notas
+nota1 = prompt("Dame la nota del primer trimestre");
+nota2 = prompt("Dame la nota del segundo trimestre");
+nota3 = prompt("Dame la nota del tercer trimestre");
+
+// Convierto a número
+nota1 = parseFloat(nota1);
+nota2 = parseFloat(nota2);
+nota3 = parseFloat(nota3);
+
+// Calculo promedio
+promedio = (nota1 + nota2 + nota3) / 3;
+
+// Condicional
+if(promedio >= 4.5){
+    alert("Aprobado con promedio: " + promedio);
+    document.write("<h1> Aprobado con promedio: " + promedio + "</h1>");
+}
+else{
+    alert("Suspenso con promedio: " + promedio);
+    document.write("<h1> Suspenso con promedio: " + promedio + "</h1>");
+}
+
+</script>
+</body>
+</html>

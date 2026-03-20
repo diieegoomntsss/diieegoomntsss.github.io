@@ -1,0 +1,36 @@
+<html>
+<head>
+ <title>Volumen Prisma</title>
+ <style>
+   h1 {color:red}
+ </style>
+</head>
+
+<body>
+<script>
+// Defino variables
+let base;
+let alturaBase;
+let alturaPrisma;
+let volumen;
+
+// Pido valores
+base = prompt("Dame la base");
+alturaBase = prompt("Dame la altura de la base");
+alturaPrisma = prompt("Dame la altura del prisma");
+
+// Convierto
+base = parseFloat(base);
+alturaBase = parseFloat(alturaBase);
+alturaPrisma = parseFloat(alturaPrisma);
+
+// Operaciones
+volumen = base * alturaBase * alturaPrisma;
+
+// Muestro resultado
+alert("El volumen es: " + volumen);
+document.write("<h1> El volumen es: " + volumen + "</h1>");
+</script>
+
+</body>
+</html>

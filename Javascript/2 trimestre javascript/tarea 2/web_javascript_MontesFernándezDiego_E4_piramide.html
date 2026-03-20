@@ -1,0 +1,36 @@
+<html>
+<head>
+ <title>Volumen Piramide</title>
+ <style>
+   h1 {color:red}
+ </style>
+</head>
+
+<body>
+<script>
+// Defino variables
+let base;
+let alturaBase;
+let altura;
+let volumen;
+
+// Pido valores
+base = prompt("Dame la base");
+alturaBase = prompt("Dame la altura de la base");
+altura = prompt("Dame la altura de la piramide");
+
+// Convierto
+base = parseFloat(base);
+alturaBase = parseFloat(alturaBase);
+altura = parseFloat(altura);
+
+// Operaciones
+volumen = (base * alturaBase * altura) / 3;
+
+// Muestro resultado
+alert("El volumen es: " + volumen);
+document.write("<h1> El volumen es: " + volumen + "</h1>");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+ <title>Examen Conducir</title>
+ <style>
+   h1 {color:red}
+ </style>
+</head>
+
+<body>
+<script>
+
+// Defino variable
+let numeroFallos;
+
+// Pido datos
+numeroFallos = prompt("¿Cuantos fallos has tenido en el examen?");
+numeroFallos = parseFloat(numeroFallos);
+
+// Estructura condicional
+if(numeroFallos > 3){
+    alert("No Apto");
+    document.write("<h1> No Apto </h1>");
+}
+else{
+    alert("Apto");
+    document.write("<h1> Apto </h1>");
+}
+
+</script>
+</body>
+</html>
