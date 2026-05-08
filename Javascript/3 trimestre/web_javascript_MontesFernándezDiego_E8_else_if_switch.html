@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 08 — else if y switch</title>
+</head>
+<body>
+
+<h1>Ejercicio 08 — Estructuras condicionales else if y switch</h1>
+<p>En este ejercicio se trabaja con decisiones múltiples, corrección de errores de sintaxis y comparación entre else if y switch.</p>
+
+<script>
+// ----------------------
+// PARTE 1: Ejemplo modificado con if - else if - else
+// ----------------------
+var tareaHecha = window.prompt("¿Has hecho la tarea? (si/no)");
+
+if (tareaHecha == "si") {
+    document.write("<p>¡Excelente! Puedes entregarla.</p>");
+} else if (tareaHecha == "no") {
+    document.write("<p>Debes hacerla antes de entregar.</p>");
+} else {
+    document.write("<p>Respuesta no válida, escribe 'si' o 'no'.</p>");
+}
+
+// ----------------------
+// PARTE 2: Corrección de programas con errores
+// ----------------------
+
+// Ejercicio 1
+let numero = prompt("Ingresa un número:");
+numero = Number(numero);
+
+if (numero > 0) {
+    alert("El número es positivo");
+} else if (numero < 0) {
+    alert("El número es negativo");
+} else {
+    alert("El número es cero");
+}
+
+// Ejercicio 2
+let contraseña = prompt("Ingresa tu contraseña:");
+
+if (contraseña === "secreto123") {
+    document.write("<p>Contraseña correcta. Bienvenido!</p>");
+} else {
+    document.write("<p>Contraseña incorrecta. Inténtalo de nuevo.</p>");
+}
+
+// Ejercicio 3
+let valor = null;
+
+if (valor === null) {
+    alert("El valor es nulo.");
+} else {
+    alert("El valor no es nulo.");
+}
+
+// Ejercicio 4
+let num = parseInt(prompt("Ingresa un número:"));
+
+if (num > 0 && num % 2 === 0) {
+    console.log("El número es positivo y par");
+} else if (num > 0 && num % 2 !== 0) {
+    console.log("El número es positivo e impar");
+} else {
+    console.log("El número no es positivo o es cero");
+}
+
+// ----------------------
+// PARTE 3: Programa de helados con else if
+// ----------------------
+var topping = window.prompt("¿Qué topping quieres: oreo, kitkat, brownie, lacasitos u otro?");
+var helado = 1.90;
+var precio = 0;
+
+if (topping == "oreo") {
+    precio = 1;
+} else if (topping == "kitkat") {
+    precio = 1.50;
+} else if (topping == "brownie") {
+    precio = 0.75;
+} else if (topping == "lacasitos") {
+    precio = 0.95;
+} else {
+    document.write("<p>No tenemos este topping, lo sentimos.</p>");
+    precio = 0;
+}
+
+var precioFinal = helado + precio;
+document.write("<p>El helado cuesta " + precioFinal.toFixed(2) + " €</p>");
+
+// ----------------------
+// PARTE 4: Programa de helados con switch
+// ----------------------
+var topping2 = window.prompt("Versión switch: ¿Qué topping quieres?");
+var precio2 = 0;
+
+switch (topping2) {
+    case "oreo":
+        precio2 = 1;
+        break;
+    case "kitkat":
+        precio2 = 1.50;
+        break;
+    case "brownie":
+        precio2 = 0.75;
+        break;
+    case "lacasitos":
+        precio2 = 0.95;
+        break;
+    default:
+        document.write("<p>No tenemos este topping, lo sentimos.</p>");
+        precio2 = 0;
+        break;
+}
+
+var precioFinal2 = helado + precio2;
+document.write("<p>El helado cuesta " + precioFinal2.toFixed(2) + " €</p>");
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 07 — Condicionales 1</title>
+</head>
+<body>
+
+    <h1>Ejercicio 07 — Introducción de datos y toma de decisiones</h1>
+    <p>
+        Este programa pregunta primero al usuario si quiere jugar. 
+        Si responde afirmativamente, le pedirá que escriba el nombre de una fruta y le mostrará el precio según la fruta indicada. 
+        Luego hace una segunda pregunta sobre si desea seguir consultando y finaliza con un mensaje adecuado. 
+        Si la respuesta inicial es negativa o incorrecta, el programa avisa o termina según corresponda.
+    </p>
+
+    <script>
+        // Pregunta inicial
+        let jugar = prompt("Este programa funciona tomando decisiones. ¿Quieres jugar? Responde con s si es que sí o con n si es que no");
+
+        if (jugar === "s") {
+
+            // Pregunta por la fruta
+            var fruta = prompt("Introduce el nombre de una fruta que desees con la primera letra en mayúscula");
+
+            switch (fruta) {
+                case 'Naranjas':
+                    alert('El kilogramo de naranjas cuesta $0.59.');
+                    break;
+                case 'Manzanas':
+                    alert('El kilogramo de manzanas cuesta $0.32.');
+                    break;
+                case 'Platanos':
+                    alert('El kilogramo de plátanos cuesta $0.48.');
+                    break;
+                case 'Cerezas':
+                    alert('El kilogramo de cerezas cuesta $3.00.');
+                    break;
+                case 'Mangos':
+                case 'Papayas':
+                    alert('El kilogramo de mangos y papayas cuesta $2.79.');
+                    break;
+                case 'Peras':
+                    alert('El kilogramo de peras cuesta $0.75.');
+                    break;
+                case 'Kiwi':
+                    alert('El kilogramo de kiwi cuesta $1.20.');
+                    break;
+                default:
+                    alert('Lo lamentamos, por el momento no disponemos de ' + fruta + '.');
+            }
+
+            // Segunda pregunta mejorada
+            var respuesta = prompt("¿Hay algo más que quieras consultar? Responde si o no");
+
+            if (respuesta === "si") {
+                alert("No tenemos tiempo para responderte en este momento. Gracias.");
+            } else if (respuesta === "no") {
+                alert("Muchas gracias por tu consulta.");
+            } else {
+                alert("Debes introducir 'si' o 'no'. Por favor, recarga la página e inténtalo de nuevo.");
+            }
+
+        } else if (jugar === "n") {
+            alert("Es una pena que no quieras participar. Quizás para la siguiente.");
+        } else {
+            alert("Debes responder con 's' o 'n'. Por favor, recarga la página e inténtalo de nuevo.");
+        }
+    </script>
+
+</body>
+</html>
