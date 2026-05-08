@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 09 — Heladería</title>
+</head>
+<body>
+<h1>Ejercicio 09 — Heladería</h1>
+<p>El usuario elige tamaño, sabor y topping de un helado, y el programa calcula el precio final.</p>
+
+<script>
+// ----------------------
+// Paso 1: Precio total
+// ----------------------
+var precioTotal = 0;
+
+// ----------------------
+// Paso 2: Elección del tamaño
+// ----------------------
+var tamaño = prompt("Elige el tamaño de tu helado: pequeño, mediano, grande").toLowerCase();
+
+if (tamaño === "pequeño") {
+    precioTotal += 1;
+} else if (tamaño === "mediano") {
+    precioTotal += 2;
+} else if (tamaño === "grande") {
+    precioTotal += 3;
+} else {
+    alert("Tamaño no válido, se asigna precio base de 0 €");
+}
+
+// ----------------------
+// Paso 3: Elección del sabor
+// ----------------------
+var sabor = prompt("Elige el sabor: vainilla, chocolate, pistacho, turrón").toLowerCase();
+
+switch(sabor) {
+    case "vainilla":      // básico
+    case "chocolate":     // básico
+        precioTotal += 0;
+        break;
+    case "pistacho":      // premium
+    case "turrón":        // premium
+        precioTotal += 1;
+        break;
+    default:
+        alert("Sabor no válido, no se suma nada al precio");
+}
+
+// ----------------------
+// Paso 4: Elección del topping
+// ----------------------
+var topping = prompt("Elige el topping: sirope, galleta, oreo, brownie").toLowerCase();
+
+if (topping === "sirope" || topping === "galleta") { // básicos
+    precioTotal += 0.3;
+} else if (topping === "oreo" || topping === "brownie") { // premium
+    precioTotal += 0.5;
+} else {
+    alert("Topping no válido, no se suma nada al precio");
+}
+
+// ----------------------
+// Paso 5: Mostrar precio final
+// ----------------------
+document.write("<h1>El precio final de tu helado es: " + precioTotal.toFixed(2) + " €</h1>");
+
+// ----------------------
+// Paso 6: Imagen del helado
+// ----------------------
+document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Ice_cream_cone_%28pixabay%29.jpg" alt="Helado" width="300">');
+</script>
+
+</body>
+</html>
