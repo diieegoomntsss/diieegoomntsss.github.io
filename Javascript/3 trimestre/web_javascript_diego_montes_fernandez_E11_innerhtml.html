@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11 — innerHTML</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .caja {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px 0;
+            min-height: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Ejercicio 11 — Modificación de HTML con JavaScript</h1>
+
+    <button onclick="saludar()">Saludar</button>
+
+    <button onclick="sumarDosNumeros()">
+        Sumar dos números
+    </button>
+
+    <button onclick="calcularEdad()">
+        Calcular nacimiento
+    </button>
+
+    <button onclick="comprobarMayorEdad()">
+        Mayoría de edad
+    </button>
+
+    <button onclick="agregarMensaje()">
+        Append
+    </button>
+
+    <button onclick="mostrarHora()">
+        Mostrar hora
+    </button>
+
+    <div id="cajaSaludo" class="caja"></div>
+
+    <div id="cajaSuma" class="caja"></div>
+
+    <div id="cajaNacimiento" class="caja"></div>
+
+    <div id="cajaEdad" class="caja"></div>
+
+    <div id="cajaAppend" class="caja"></div>
+
+    <div id="cajaHora" class="caja"></div>
+
+    <script>
+
+        // Función 1
+        function saludar() {
+
+            let caja = document.getElementById("cajaSaludo");
+
+            caja.innerHTML = "<h2>Hola desde JavaScript</h2>";
+
+        }
+
+        // Función 2
+        function sumarDosNumeros() {
+
+            let numero1 = Number(prompt("Introduce el primer número"));
+
+            let numero2 = Number(prompt("Introduce el segundo número"));
+
+            let suma = numero1 + numero2;
+
+            let caja = document.getElementById("cajaSuma");
+
+            caja.innerHTML = "<p>La suma es: " + suma + "</p>";
+
+        }
+
+        // Función 3
+        function calcularEdad() {
+
+            let edad = Number(prompt("Introduce tu edad"));
+
+            let añoActual = 2026;
+
+            let nacimiento = añoActual - edad;
+
+            let caja = document.getElementById("cajaNacimiento");
+
+            caja.innerHTML =
+                "<p>Naciste aproximadamente en el año "
+                + nacimiento +
+                "</p>";
+
+        }
+
+        // Función 4
+        function comprobarMayorEdad() {
+
+            let edad = Number(prompt("Introduce tu edad"));
+
+            let caja = document.getElementById("cajaEdad");
+
+            if (edad >= 18) {
+
+                caja.innerHTML = "<p>Eres mayor de edad</p>";
+
+            } else {
+
+                caja.innerHTML = "<p>Eres menor de edad</p>";
+
+            }
+
+        }
+
+        // Función 5
+        function agregarMensaje() {
+
+            let caja = document.getElementById("cajaAppend");
+
+            caja.append(" Nuevo mensaje añadido ");
+
+        }
+
+        // Función 6 creada por mí
+        function mostrarHora() {
+
+            let fecha = new Date();
+
+            let hora = fecha.getHours() + ":" +
+                       fecha.getMinutes() + ":" +
+                       fecha.getSeconds();
+
+            let caja = document.getElementById("cajaHora");
+
+            caja.innerHTML =
+                "<p>La hora actual es: " + hora + "</p>";
+
+        }
+
+    </script>
+
+</body>
+</html>
