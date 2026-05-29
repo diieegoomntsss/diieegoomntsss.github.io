@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12 — Inputs y HTML dinámico</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .caja {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            background-color: white;
+        }
+
+        button{
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+
+        input{
+            margin: 5px;
+            padding: 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Ejercicio 12 — Inputs y HTML dinámico</h1>
+
+    <hr>
+
+    <h2>Saludo</h2>
+
+    <input type="text" id="nombre" placeholder="Escribe tu nombre">
+
+    <button onclick="saludar()">Saludar</button>
+
+    <div id="resultadoSaludo" class="caja"></div>
+
+    <hr>
+
+    <h2>Suma de números</h2>
+
+    <input type="number" id="numero1" placeholder="Número 1">
+    <input type="number" id="numero2" placeholder="Número 2">
+
+    <button onclick="sumar()">Sumar</button>
+
+    <div id="resultadoSuma" class="caja"></div>
+
+    <hr>
+
+    <h2>Mayoría de edad</h2>
+
+    <input type="number" id="edad" placeholder="Escribe tu edad">
+
+    <button onclick="comprobarEdad()">Comprobar edad</button>
+
+    <div id="resultadoEdad" class="caja"></div>
+
+    <hr>
+
+    <h2>Append</h2>
+
+    <button onclick="agregarMensaje()">Añadir mensaje</button>
+
+    <div id="resultadoAppend" class="caja"></div>
+
+    <hr>
+
+    <h2>Quinta función — Aprobado o suspenso</h2>
+
+    <input type="number" id="nota" placeholder="Introduce tu nota">
+
+    <button onclick="comprobarNota()">Comprobar nota</button>
+
+    <div id="resultadoNota" class="caja"></div>
+
+    <script>
+
+        // FUNCIÓN 1
+
+        function saludar() {
+
+            let nombre = document.getElementById("nombre").value;
+
+            let resultado = document.getElementById("resultadoSaludo");
+
+            resultado.innerHTML = "<h2>Hola " + nombre + "</h2>";
+
+        }
+
+        // FUNCIÓN 2
+
+        function sumar() {
+
+            let numero1 = Number(document.getElementById("numero1").value);
+
+            let numero2 = Number(document.getElementById("numero2").value);
+
+            let suma = numero1 + numero2;
+
+            let resultado = document.getElementById("resultadoSuma");
+
+            resultado.innerHTML = "<p>La suma es: " + suma + "</p>";
+
+        }
+
+        // FUNCIÓN 3
+
+        function comprobarEdad() {
+
+            let edad = Number(document.getElementById("edad").value);
+
+            let resultado = document.getElementById("resultadoEdad");
+
+            if (edad >= 18) {
+
+                resultado.innerHTML = "<p>Eres mayor de edad</p>";
+
+            } else {
+
+                resultado.innerHTML = "<p>Eres menor de edad</p>";
+
+            }
+
+        }
+
+        // FUNCIÓN 4
+
+        function agregarMensaje() {
+
+            let caja = document.getElementById("resultadoAppend");
+
+            caja.append(" Nuevo mensaje añadido ");
+
+        }
+
+        // FUNCIÓN 5
+
+        function comprobarNota() {
+
+            let nota = Number(document.getElementById("nota").value);
+
+            let resultado = document.getElementById("resultadoNota");
+
+            if (nota >= 5) {
+
+                resultado.innerHTML = "<p>Has aprobado</p>";
+
+            } else {
+
+                resultado.innerHTML = "<p>Has suspendido</p>";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
