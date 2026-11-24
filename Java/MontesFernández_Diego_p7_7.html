@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 7 - Cara adaptable</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+<script>
+function setup() {
+  createCanvas(600, 400);
+  background(255);
+
+  // Variables derivadas del tamaño del lienzo
+  let centroX = width / 2;
+  let centroY = height / 2;
+  let diametro = height * 0.75;
+  let ojo = diametro * 0.10;
+  let separacionOjos = diametro * 0.167;
+  let grosor = diametro * 0.01;
+
+  // Contorno de la cara: centrado y proporcional
+  stroke(0);
+  strokeWeight(grosor);
+  noFill();
+  circle(centroX, centroY, diametro);
+
+  // Ojo derecho
+  noStroke();
+  fill(0, 0, 255);
+  circle(centroX + separacionOjos,
+         centroY - diametro * 0.167, ojo);
+
+  // Ojo izquierdo
+  circle(centroX - separacionOjos,
+         centroY - diametro * 0.167, ojo);
+
+  // Sonrisa roja
+  stroke(255, 0, 0);
+  fill(255, 0, 0);
+  strokeWeight(grosor);
+  arc(centroX, centroY + diametro * 0.33,
+      diametro * 0.33, diametro * 0.067, 0, PI);
+
+  // Ceja izquierda
+  stroke(0);
+  fill(0);
+  arc(centroX - separacionOjos,
+      centroY - diametro * 0.233,
+      diametro * 0.233, diametro * 0.05, PI, 0);
+
+  // Ceja derecha
+  arc(centroX + separacionOjos,
+      centroY - diametro * 0.233,
+      diametro * 0.233, diametro * 0.05, PI, 0);
+}
+</script>
+</body>
+</html>
