@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 4 - Circunferencias y arcos</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+<script>
+function setup() {
+  createCanvas(400, 400);
+  background(255);
+
+  // Contorno cara
+  circle(200, 200, 300);
+  
+  // Ojo derecho
+  fill(0, 0, 255)
+  circle(250, 150, 30);
+  
+// Ojo izquierdo
+  fill(0, 0, 255)
+  circle(150, 150, 30);
+
+// Sonrisa
+stroke (255,0,0)
+fill (255,0,0)
+arc(200, 300, 100, 20, 0, PI)
+
+// Cejas
+stroke (0)
+fill (0,0,0)
+arc(150, 130, 70, 15, PI, 0);
+
+// Ceja
+stroke (0)
+fill (0,0,0)
+arc(250, 130, 70, 15, PI, 0);
+
+
+
+
+
+}
+</script>
+</body>
+</html>
